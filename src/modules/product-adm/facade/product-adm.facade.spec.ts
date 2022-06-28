@@ -40,4 +40,23 @@ describe("ProductAdmFacade test", () => {
 
     expect(product).toEqual(expect.objectContaining(input));
   });
+
+  it("Should check product stock", async () => {
+    const productAdmFacade = ProductAdmFacadeFactory.create();
+
+    const input = {
+      id: "1",
+      name: "Product 1",
+      description: "Product 1 description",
+      purchasePrice: 10,
+      stock: 10,
+    };
+
+    await productAdmFacade.addProduct(input);
+
+    const productStock = await productAdmFacade.checkStock({ productId: "1" });
+
+    expect(productStock.productId).toEqual("1");
+    expect(productStock.stock).toEqual(10);
+  });
 });
