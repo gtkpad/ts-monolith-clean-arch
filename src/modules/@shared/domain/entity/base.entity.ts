@@ -13,7 +13,7 @@ export class BaseEntity {
 
   constructor(props: BaseEntityProps) {
     const { id, createdAt, updatedAt } = props;
-    this._id = id;
+    this._id = id || new Id();
     this._createdAt = createdAt || new Date();
     this._updatedAt = updatedAt || new Date();
   }
