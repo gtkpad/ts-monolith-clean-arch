@@ -1,11 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
-import { Id } from "../../@shared/domain/value-object/id.value-object";
-import { Transaction } from "../domain/transaction";
 import { PaymentFacadeFactory } from "../factory/payment.facade.factory";
 import { TransactionModel } from "../repository/transaction.model";
-import { TransactionRepository } from "../repository/transaction.repository";
-import { ProcessPaymentUseCase } from "../usecase/process-payment/process-payment.usecase";
-import { PaymentFacade } from "./payment.facade";
 
 describe("PaymentFacade unit test", () => {
   let sequelize: Sequelize;
