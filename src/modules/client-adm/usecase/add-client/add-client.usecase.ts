@@ -14,6 +14,7 @@ export class AddClientUseCase implements IUseCase {
     input: InputAddClientUseCaseDto
   ): Promise<OutputAddClientUseCaseDto> {
     const props = {
+      id: !!input.id ? new Id(input.id) : new Id(),
       name: input.name,
       email: input.email,
       address: input.address,
