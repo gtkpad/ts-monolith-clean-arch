@@ -4,7 +4,7 @@ export interface InputProcessPaymentUseCaseDto {
 }
 
 export interface OutputProcessPaymentUseCaseDto {
-  transactionId: string;
+  id: string;
   status: string;
   amount: number;
   orderId: string;

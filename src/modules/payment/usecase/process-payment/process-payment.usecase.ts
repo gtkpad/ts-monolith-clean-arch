@@ -24,7 +24,7 @@ export class ProcessPaymentUseCase implements IUseCase {
     );
 
     return {
-      transactionId: persistTransaction.id.id,
+      id: persistTransaction.id.id,
       amount: persistTransaction.amount,
       orderId: persistTransaction.orderId,
       status: persistTransaction.status,
